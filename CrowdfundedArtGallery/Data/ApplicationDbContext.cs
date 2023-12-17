@@ -13,6 +13,7 @@ namespace CrowdfundedArtGallery.Data
         }
 
         public DbSet<Category> Categories { get; set; }
+        public DbSet<SocialLinks> SocialLinks { get; set; }
         public DbSet<ArtPost> ArtPosts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -37,5 +38,7 @@ namespace CrowdfundedArtGallery.Data
                 .Navigation(ap => ap.User)
                 .UsePropertyAccessMode(PropertyAccessMode.Property);
         }
+
+        
     }
 }
